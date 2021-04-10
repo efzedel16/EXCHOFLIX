@@ -1,11 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import NavbarMenu from './components/NavbarMenu'
 
 function App() {
   return (
-    <>
-      
-    </>
+      <>
+          <NavbarMenu/>
+      </>
   );
 }
 
