@@ -18,7 +18,7 @@ const Trending = () => {
 
 	return (
 		<Container>
-			<h3>Trending</h3>
+			<h4>Trending</h4>
 			<CardContainer>
 				{content.map((value, index) => {
 					return <MediaCard value={value} key={index} />
