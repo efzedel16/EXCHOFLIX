@@ -16,4 +16,4 @@
 - User rent a movie with a subscription system. When the subscription period expires, the customer will no longer be able to view the content
 
 ## URL
-[Exchourant - Find A Dish, Suit One's Taste](https://exchoflix.netlify.app/)
+[Exchoflix - Unlimited Entertaiment](https://exchoflix.netlify.app/)
