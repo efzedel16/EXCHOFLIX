@@ -4,7 +4,7 @@ import { Container, Row } from 'react-bootstrap'
 
 import contentAction from '../../redux/actions/contentAction'
 import MediaCard from '../MediaCard/MediaCard'
-import ScrollingContainer from '../styles/ScrollingContainer'
+import { CardContainer } from '../styles/ScrollingContent'
 
 const Trending = () => {
 	const dispatch = useDispatch()
@@ -18,9 +18,12 @@ const Trending = () => {
 
 	return (
 		<Container>
-			{content.map((value, index) => {
-				return <MediaCard value={value} key={index} />
-			})}
+			<h3>Trending</h3>
+			<CardContainer>
+				{content.map((value, index) => {
+					return <MediaCard value={value} key={index} />
+				})}
+			</CardContainer>
 		</Container>
 	)
 }

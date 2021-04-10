@@ -4,7 +4,7 @@ import Trending from './components/Trending/Trending'
 function App() {
 	return (
 		<>
-			{/* <NavbarMenu/> */}
+			<NavbarMenu />
 			<Trending />
 		</>
 	)
