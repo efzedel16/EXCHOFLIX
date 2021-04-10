@@ -5,6 +5,7 @@ function App() {
 	return (
 		<>
 			<Trending />
+			<h1>page</h1>
 		</>
 	)
 }

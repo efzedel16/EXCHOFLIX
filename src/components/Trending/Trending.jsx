@@ -1,13 +1,24 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { Container, Row } from 'react-bootstrap'
 
-import HelperAPI from '../../API/HelperAPI'
+import contentAction from '../../redux/actions/contentAction'
 import MediaCard from '../MediaCard/MediaCard'
+import ScrollingContainer from '../styles/ScrollingContainer'
 
 const Trending = () => {
+	const dispatch = useDispatch()
+	const content = useSelector((state) => state.content)
+
+	console.log(content)
+
+	useEffect(() => {
+		dispatch(contentAction.setTrending())
+	}, [dispatch])
+
 	return (
 		<Container>
-			{HelperAPI.map((value, index) => {
+			{content.map((value, index) => {
 				return <MediaCard value={value} key={index} />
 			})}
 		</Container>
