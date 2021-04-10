@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Trending from './components/Trending/Trending'
 
 function App() {
-  return (
-    <>
-      
-    </>
-  );
+	return (
+		<>
+			<Trending />
+		</>
+	)
 }
 
-export default App;
+export default App
