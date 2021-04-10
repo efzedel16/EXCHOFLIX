@@ -1,0 +1,11 @@
+.bg-light {
+    background-color: #fff;
+}
+
+.nav-link {
+    color: grey;
+}
+
+.nav-link:hover {
+    color: black;
+}
