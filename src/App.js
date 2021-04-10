@@ -1,4 +1,4 @@
-import NavbarMenu from './components/NavbarMenu'
+import NavbarMenu from './components/NavbarMenu/NavbarMenu'
 
 function App() {
   return (
