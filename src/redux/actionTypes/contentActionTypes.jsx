@@ -1,1 +1,2 @@
-export const SET_TRENDING = 'SET_TRENDING'
+export const SET_TRENDING = 'SET_TRENDING';
+export const SET_POPULAR_MOVIES ='SET_POPULAR_MOVIES';

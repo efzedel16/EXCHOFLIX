@@ -1,7 +1,9 @@
-import contentReducer from './contentReducer'
+import trendingReducer from './trendingReducer';
+import popularMoviesReducer from './popularMoviesReducer';
 
 const rootReducer = {
-	content: contentReducer
+	content: trendingReducer,
+	popularMovies: popularMoviesReducer,
 }
 
-export default rootReducer
+export default rootReducer;
