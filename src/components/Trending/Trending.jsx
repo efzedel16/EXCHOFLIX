@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { Container, Row } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 
 import contentAction from '../../redux/actions/contentAction'
 import MediaCard from '../MediaCard/MediaCard'
