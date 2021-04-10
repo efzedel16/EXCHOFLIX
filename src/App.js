@@ -1,11 +1,13 @@
 import NavbarMenu from './components/NavbarMenu'
+import Trending from './components/Trending/Trending'
 
 function App() {
-  return (
-      <>
-          <NavbarMenu/>
-      </>
-  );
+	return (
+		<>
+			<NavbarMenu />
+			<Trending />
+		</>
+	)
 }
 
-export default App;
+export default App
