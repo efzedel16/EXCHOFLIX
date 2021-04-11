@@ -1,5 +1,5 @@
 import HelperAPI from '../../API/HelperAPI'
-import { SET_TRENDING, SET_POPULAR_MOVIES } from '../actionTypes/contentActionTypes'
+import { SET_TRENDING, SET_POPULAR_MOVIES, SET_FREE_WATCH } from '../actionTypes/contentActionTypes'
 
 const setTrending = () => async (dispatch) => {
 	try {
@@ -36,9 +36,28 @@ const setPopularMovies = () => async (dispatch) => {
 	}
 }
 
+const setFreetoWatch = () => async (dispatch) => {
+	try {
+		const content = await HelperAPI.freetoWatch({
+			method: 'get'
+		})
+		console.log(content);
+
+		dispatch({
+			type: SET_FREE_WATCH,
+			payload: {
+				content: content.data.results
+			}
+		})
+	} catch (error) {
+		console.log(error);
+	}
+}
+
 const contentAction = {
 	setTrending,
-	setPopularMovies
+	setPopularMovies,
+	setFreetoWatch
 }
 
 export default contentAction;

@@ -1,2 +1,3 @@
 export const SET_TRENDING = 'SET_TRENDING';
 export const SET_POPULAR_MOVIES ='SET_POPULAR_MOVIES';
+export const SET_FREE_WATCH = 'SET_FREE_WATCH';
