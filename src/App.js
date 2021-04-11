@@ -1,6 +1,9 @@
 import NavbarMenu from './components/NavbarMenu/NavbarMenu';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import PopularMovie from'./pages/PopularMovies';
+import PopularMovies from'./pages/PopularMovies';
+import NowPlayingMovies from'./pages/NowPlayingMovies';
+import TopRatedMovies from'./pages/TopRatedMovies';
+import UpcomingMovies from'./pages/UpcomingMovies';
 import HomePage from './pages/Homepage';
 
 function App() {
@@ -9,8 +12,17 @@ function App() {
 			<Router>
 				<NavbarMenu />
 				<Switch>
+					<Route path="/upcoming-movies">
+						<UpcomingMovies/>
+					</Route>
+					<Route path="/top-rated-movies">
+						<TopRatedMovies/>
+					</Route>
+					<Route path="/now-playing-movies">
+						<NowPlayingMovies/>
+					</Route>
 					<Route path="/popular-movies">
-						<PopularMovie/>
+						<PopularMovies/>
 					</Route>
 					<Route path="/">
 						<HomePage/>
@@ -21,4 +33,4 @@ function App() {
 	)
 }
 
-export default App
+export default App;
