@@ -10,9 +10,15 @@ const popularMovies = axios.create({
 	baseURL: `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
 })
 
+const freetoWatch = axios.create({
+	baseURL: 'https://api.themoviedb.org/3/trending/all/week?api_key=${apiKey}&language=en-US'
+
+})
+
 const HelperAPI = {
 	trending,
-	popularMovies
+	popularMovies,
+	freetoWatch
 }
 
 export default HelperAPI;
