@@ -5,6 +5,7 @@ import NowPlayingMovies from'./pages/NowPlayingMovies';
 import TopRatedMovies from'./pages/TopRatedMovies';
 import UpcomingMovies from'./pages/UpcomingMovies';
 import HomePage from './pages/Homepage';
+import FooterWeb from './components/Footer/Footer'
 
 function App() {
 	return (
@@ -29,6 +30,7 @@ function App() {
 					</Route>
 				</Switch>
 			</Router>
+			<FooterWeb />
 		</>
 	)
 }
