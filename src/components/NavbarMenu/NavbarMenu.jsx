@@ -7,16 +7,16 @@ const NavbarMenu = () => {
     return (
         <>
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand as={Link} to="/" className="mx-3">
-                    <box-icon name='movie-play'></box-icon>Exchoflix</Navbar.Brand>
+                <box-icon as={Link} to="/" name='movie-play'>Exchoflix</box-icon>
+                <Navbar.Brand as={Link} to="/" className="mx-3">Exchoflix</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <NavDropdown title="Movies" id="basic-nav-dropdown">
                             <NavDropdown.Item as={Link} to="/popular-movies">Popular</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Now Playing</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Upcoming</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.4">Top Rated</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/now-playing-movies">Now Playing</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/upcoming-movies">Upcoming</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/top-rated-movies">Top Rated</NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title="TV Shows" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Popular</NavDropdown.Item>
