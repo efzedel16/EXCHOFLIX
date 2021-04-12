@@ -9,8 +9,6 @@ const Trending = () => {
 	const dispatch = useDispatch()
 	const content = useSelector((state) => state.trending)
 
-	console.log(content)
-
 	useEffect(() => {
 		dispatch(contentAction.setTrending())
 	}, [dispatch])

@@ -1,10 +1,10 @@
-import NavbarMenu from './components/NavbarMenu/NavbarMenu';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import PopularMovies from'./pages/PopularMovies';
-import NowPlayingMovies from'./pages/NowPlayingMovies';
-import TopRatedMovies from'./pages/TopRatedMovies';
-import UpcomingMovies from'./pages/UpcomingMovies';
-import HomePage from './pages/Homepage';
+import NavbarMenu from './components/NavbarMenu/NavbarMenu'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import PopularMovies from './pages/PopularMovies'
+import NowPlayingMovies from './pages/NowPlayingMovies'
+import TopRatedMovies from './pages/TopRatedMovies'
+import UpcomingMovies from './pages/UpcomingMovies'
+import HomePage from './pages/Homepage'
 import FooterWeb from './components/Footer/Footer'
 
 function App() {
@@ -14,19 +14,19 @@ function App() {
 				<NavbarMenu />
 				<Switch>
 					<Route path="/upcoming-movies">
-						<UpcomingMovies/>
+						<UpcomingMovies />
 					</Route>
 					<Route path="/top-rated-movies">
-						<TopRatedMovies/>
+						<TopRatedMovies />
 					</Route>
 					<Route path="/now-playing-movies">
-						<NowPlayingMovies/>
+						<NowPlayingMovies />
 					</Route>
 					<Route path="/popular-movies">
-						<PopularMovies/>
+						<PopularMovies />
 					</Route>
 					<Route path="/">
-						<HomePage/>
+						<HomePage />
 					</Route>
 				</Switch>
 			</Router>
@@ -35,4 +35,4 @@ function App() {
 	)
 }
 
-export default App;
+export default App

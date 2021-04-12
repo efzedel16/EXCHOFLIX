@@ -6,7 +6,8 @@ import {
 	SET_NOW_PLAYING_MOVIES,
 	SET_UPCOMING_MOVIES,
 	SET_TOP_RATED_MOVIES,
-	SET_FREE_WATCH
+	SET_FREE_WATCH,
+	SET_SEARCH
 } from '../actionTypes/contentActionTypes'
 
 const setTrending = () => async (dispatch) => {
@@ -86,7 +87,7 @@ const setTopRatedMovies = () => async (dispatch) => {
 	try {
 		const content = await HelperAPI({
 			method: 'get',
-			url: `movie/top_rated?api_key=${APIKey}&language=en-US&page=1`
+			url: `/movie/top_rated?api_key=${APIKey}&language=en-US&page=1`
 		})
 		console.log(content)
 
@@ -118,13 +119,40 @@ const setFreetoWatch = () => async (dispatch) => {
 	}
 }
 
+const setSearch = (searchValue) => async (dispatch) => {
+	dispatch({
+		type: SET_SEARCH,
+		payload: searchValue
+	})
+}
+
+const setSearchResult = () => async (dispatch) => {
+	try {
+		const content = await HelperAPI({
+			method: 'get',
+			url: `/movie/top_rated?api_key=${APIKey}&language=en-US&page=1`
+		})
+		console.log(content)
+
+		dispatch({
+			type: SET_TOP_RATED_MOVIES,
+			payload: {
+				content: content.data.results
+			}
+		})
+	} catch (error) {
+		console.log(error)
+	}
+}
+
 const contentAction = {
 	setTrending,
 	setPopularMovies,
 	setNowPlayingMovies,
 	setUpcomingMovies,
 	setTopRatedMovies,
-	setFreetoWatch
+	setFreetoWatch,
+	setSearch
 }
 
 export default contentAction
