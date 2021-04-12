@@ -5,17 +5,17 @@ import contentAction from '../../redux/actions/contentAction'
 import MediaCard from '../MediaCard/MediaCard'
 import { CardContainer } from '../../styles/jsx/ScrollingContent'
 
-const Trending = () => {
+const FreetoWatch = () => {
 	const dispatch = useDispatch()
 	const content = useSelector((state) => state.trending)
 
 	useEffect(() => {
-		dispatch(contentAction.setTrending())
+		dispatch(contentAction.setFreetoWatch())
 	}, [dispatch])
 
 	return (
 		<Container>
-			<h4>Trending</h4>
+			<h4>Free to Watch</h4>
 			<CardContainer>
 				{content.map((value, index) => {
 					return <MediaCard value={value} key={index} />
@@ -25,4 +25,4 @@ const Trending = () => {
 	)
 }
 
-export default Trending
+export default FreetoWatch

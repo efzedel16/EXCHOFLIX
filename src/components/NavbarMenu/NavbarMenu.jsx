@@ -1,9 +1,23 @@
 import React from 'react'
 import { Navbar, Nav, NavDropdown, Form, FormControl } from 'react-bootstrap'
-import './NavbarMenu.css'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
+import './NavbarMenu.css'
+import contentAction from '../../redux/actions/contentAction'
+
 const NavbarMenu = () => {
+	const dispatch = useDispatch()
+	const searchValue = useSelector((state) => state.searchValue.searchValue)
+
+	console.log(searchValue)
+
+	const handleForm = (e) => {
+		e.preventDefault()
+
+		dispatch(contentAction.setSearch(''))
+	}
+
 	return (
 		<>
 			<Navbar bg="light" expand="lg">
@@ -37,8 +51,17 @@ const NavbarMenu = () => {
 							<NavDropdown.Item href="#action/3.4">Top Rated</NavDropdown.Item>
 						</NavDropdown>
 					</Nav>
-					<Form inline>
-						<FormControl type="text" placeholder="Search" className="mr-sm-2" />
+					<Form inline onSubmit={handleForm}>
+						<FormControl
+							type="text"
+							placeholder="Search"
+							className="mr-sm-2"
+							value={searchValue}
+							// onChange={handleSearchInput}
+							onChange={(e) => dispatch(contentAction.setSearch(e.target.value))}
+							// as={Link}
+							// to="/search-result?query=abcd"
+						/>
 					</Form>
 					<Nav>
 						<Nav.Link href="#signin">Sign In</Nav.Link>
