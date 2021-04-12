@@ -4,9 +4,6 @@ import { Container, Card } from 'react-bootstrap'
 export const CardContainer = styled(Container)`
 	display: flex;
 	overflow-x: auto;
-	// &::-webkit-scrollbar {
-	// 	display: none;
-	// }
 `
 
 export const CardImage = styled(Card.Img)`

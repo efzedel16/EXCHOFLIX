@@ -1,25 +1,31 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Form, FormControl } from 'react-bootstrap'
+import { useHistory } from 'react-router-dom'
 
-const SearchBar = ({ search }) => {
-	const [searchValue, setSearchValue] = useState('')
+import contentAction from '../../redux/actions/contentAction'
 
-	const handleSearchInput = (e) => {
-		setSearchValue(e.target.value)
+const SearchBar = () => {
+	const dispatch = useDispatch()
+	let history = useHistory()
+	const searchValue = useSelector((state) => state.searchValue.searchValue)
+
+	const handleForm = (e) => {
+		e.preventDefault()
+		dispatch(contentAction.setSearchResult(searchValue))
+		dispatch(contentAction.setSearch(''))
+		history.push(`/search-result?query=${searchValue}`)
 	}
 
 	return (
 		<div>
-			<Form inline>
+			<Form inline onSubmit={handleForm}>
 				<FormControl
 					type="text"
 					placeholder="Search"
 					className="mr-sm-2"
 					value={searchValue}
-					onChange={handleSearchInput}
-					// onChange={(e) => dispatch(contentAction.setSearchResult(e.target.value))}
-					// as={Link}
-					// to="/search-result?query=abcd"
+					onChange={(e) => dispatch(contentAction.setSearch(e.target.value))}
 				/>
 			</Form>
 		</div>

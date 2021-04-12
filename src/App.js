@@ -1,6 +1,6 @@
 import Home from './pages/Home'
 import Header from './components/Header/Header'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, useHistory } from 'react-router-dom'
 
 // MOVIES
 import PopularMovies from './pages/Movies/PopularMovies'
@@ -15,6 +15,7 @@ import OnTheAirTVShows from './pages/TVShows/OnTheAirTVShows'
 import TopRatedTVShows from './pages/TVShows/TopRatedTVShows'
 
 import FooterWeb from './components/Footer/Footer'
+import SearchResult from './pages/SearchResult'
 
 function App() {
 	return (
@@ -22,6 +23,9 @@ function App() {
 			<Router>
 				<Header />
 				<Switch>
+					<Route path="/search-result">
+						<SearchResult />
+					</Route>
 					<Route path="/popular-tv-shows">
 						<PopularTVShows />
 					</Route>
@@ -51,7 +55,7 @@ function App() {
 					</Route>
 				</Switch>
 			</Router>
-			<FooterWeb />
+			{/* <FooterWeb /> */}
 		</>
 	)
 }

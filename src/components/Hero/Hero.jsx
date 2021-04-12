@@ -10,10 +10,10 @@ const Hero = () => {
 				Cancel anytime.
 			</h3>
 			<Button variant="primary" className="mt-4">
-				Start your free trial
+				Enroll Now
 			</Button>
 		</Jumbotron>
 	)
 }
 
-export default Hero;
+export default Hero
