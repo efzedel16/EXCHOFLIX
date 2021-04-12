@@ -12,7 +12,7 @@
 
 ## MVP
 - Show movies/tv series in home and details page
-- Search movies/tv series
+- Search movies/tv series/person
 - Implement a subscription system. When the subscription period expires, the customer will no longer be able to view the content
 
 ## URL
