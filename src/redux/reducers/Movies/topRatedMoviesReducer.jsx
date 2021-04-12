@@ -1,8 +1,7 @@
-import { SET_TOP_RATED_MOVIES } from '../actionTypes/contentActionTypes';
+import { SET_TOP_RATED_MOVIES } from '../../actionTypes/contentActionTypes';
 
-const initialState = [];
-
-const topRatedMoviesReducer = (state = initialState, action) => {
+const initialState = [],
+    topRatedMoviesReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_TOP_RATED_MOVIES:
             return action.payload.content;

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Container } from 'react-bootstrap'
-import contentAction from '../redux/actions/contentAction'
-import MediaCard from '../components/MediaCard/MediaCard'
+import contentAction from '../../redux/actions/contentAction'
+import MediaCard from '../../components/MediaCard/MediaCard'
 
 const NowPlayingMovies = () => {
 	const dispatch = useDispatch()
@@ -23,4 +23,4 @@ const NowPlayingMovies = () => {
 	)
 }
 
-export default NowPlayingMovies
+export default NowPlayingMovies;
