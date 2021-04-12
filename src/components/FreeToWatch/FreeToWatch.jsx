@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Container } from 'react-bootstrap'
 import contentAction from '../../redux/actions/contentAction'
 import MediaCard from '../MediaCard/MediaCard'
-import { CardContainer } from '../styles/ScrollingContent'
+import { CardContainer } from '../../styles/jsx/ScrollingContent'
 
 const FreetoWatch = () => {
 	const dispatch = useDispatch()

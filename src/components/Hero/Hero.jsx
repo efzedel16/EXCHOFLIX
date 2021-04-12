@@ -1,7 +1,7 @@
 import React from 'react'
 import { Jumbotron, Button } from 'react-bootstrap'
 
-const HomePageSearch = () => {
+const Hero = () => {
 	return (
 		<Jumbotron>
 			<h2>Welcome.</h2>
@@ -16,4 +16,4 @@ const HomePageSearch = () => {
 	)
 }
 
-export default HomePageSearch
+export default Hero;

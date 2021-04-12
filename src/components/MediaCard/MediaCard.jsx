@@ -1,8 +1,7 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import { RadialProgress } from 'react-radial-progress-indicator'
-
-import { CardImage, CardTitle, CardDate } from '../styles/ScrollingContent'
+import { CardImage, CardTitle, CardDate } from '../../styles/jsx/ScrollingContent'
 
 const MediaCard = ({ value, index }) => {
 	// function parse(str) {

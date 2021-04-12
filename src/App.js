@@ -1,18 +1,39 @@
-import NavbarMenu from './components/NavbarMenu/NavbarMenu'
+import Home from './pages/Home'
+import Header from './components/Header/Header'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import PopularMovies from './pages/PopularMovies'
-import NowPlayingMovies from './pages/NowPlayingMovies'
-import TopRatedMovies from './pages/TopRatedMovies'
-import UpcomingMovies from './pages/UpcomingMovies'
-import HomePage from './pages/Homepage'
+
+// MOVIES
+import PopularMovies from './pages/Movies/PopularMovies'
+import NowPlayingMovies from './pages/Movies/NowPlayingMovies'
+import TopRatedMovies from './pages/Movies/TopRatedMovies'
+import UpcomingMovies from './pages/Movies/UpcomingMovies'
+
+// TV SHOWS
+import PopularTVShows from './pages/TVShows/PopularTVShows'
+import AiringTodayTVShows from './pages/TVShows/AiringTodayTVShows'
+import OnTheAirTVShows from './pages/TVShows/OnTheAirTVShows'
+import TopRatedTVShows from './pages/TVShows/TopRatedTVShows'
+
 import FooterWeb from './components/Footer/Footer'
 
 function App() {
 	return (
 		<>
 			<Router>
-				<NavbarMenu />
+				<Header />
 				<Switch>
+					<Route path="/popular-tv-shows">
+						<PopularTVShows />
+					</Route>
+					<Route path="/airing-today-tv-shows">
+						<AiringTodayTVShows />
+					</Route>
+					<Route path="/on-the-air-tv-shows">
+						<OnTheAirTVShows />
+					</Route>
+					<Route path="/top-rated-tv-shows">
+						<TopRatedTVShows />
+					</Route>
 					<Route path="/upcoming-movies">
 						<UpcomingMovies />
 					</Route>
@@ -26,7 +47,7 @@ function App() {
 						<PopularMovies />
 					</Route>
 					<Route path="/">
-						<HomePage />
+						<Home />
 					</Route>
 				</Switch>
 			</Router>

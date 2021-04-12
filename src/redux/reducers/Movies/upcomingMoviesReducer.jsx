@@ -1,7 +1,7 @@
-import { SET_UPCOMING_MOVIES } from '../actionTypes/contentActionTypes';
+import { SET_UPCOMING_MOVIES } from '../../actionTypes/contentActionTypes';
 
-const initialState = [];
-const upcomingMoviesReducer = (state = initialState, action) => {
+const initialState = [],
+    upcomingMoviesReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_UPCOMING_MOVIES:
             return action.payload.content;
